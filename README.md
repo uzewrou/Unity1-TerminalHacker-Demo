@@ -1,6 +1,6 @@
 # Unity1-TerminalHacker-Demo
 
-###DO NOT CLONE this demo. This repo has the working solution of the terminal hacker game.  Instead, create a new project and follow these steps:
+### DO NOT CLONE this demo. This repo has the working solution of the terminal hacker game.  Instead, create a new project and follow these steps:
 
 1. Create a new 3D Unity Project
 2. Assets > Import Package > Custom Package [these](https://drive.google.com/open?id=1_0dUHQ9KFmEfOyo2VTyzJjP1_0q5wjiR) assets

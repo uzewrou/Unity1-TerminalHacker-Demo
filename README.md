@@ -12,7 +12,6 @@ DO NOT CLONE this demo. This repo has the working solution of the terminal hacke
 7. Open the script, and inside the Start() function, write:
 
 ```
-C#
 		    // Use this for initialization
 		    void Start () {
 		        Terminal.WriteLine ("What would you like to hack into?");
@@ -25,6 +24,8 @@ C#
 8. Run the game. Show that just by adding the script, it doesn't really do anything until we attach it to a game object! Then drag and drop the script onto the WM2000 game object.
 9. Move the Terminal.WriteLine into a function. Then, show them how to pass a parameter into the function
 
+```
+
 		    void Start () {
 		        ShowMainMenu ("Hello Huss");
 		    }
@@ -36,21 +37,29 @@ C#
 		        Terminal.WriteLine ("Press 1 for the local library");
 		        Terminal.WriteLine ("Press 2 for the local police station");
 		        Terminal.WriteLine ("Enter your selection:");
-		    } 
+		    }
+```
+		   
 		
 10. Lose a semi colon somewhere to show them how to read errors
 11. Use the OnUserInput (build into this project, not a Unity thing), and show them print statement in console
+```
 		    void OnUserInput(string input){
 		        print (input == "1");
-		    } 
+		    }
+```
 		
-12. Add a level variable and an enum (enum is to limit our options, and to help reduce bugs)
+12. Add a level variable and an enum up top (enum is to limit our options, and to help reduce bugs)
+```
 		    //Game state
 		    int level;
 		    enum Screen {MainMenu, Password, Win};
-		    Screen currentScreen = Screen.MainMenu; 
+		    Screen currentScreen = Screen.MainMenu;
+```
 		
 13. Refactoring to make things look more organized:
+
+```
 		    void OnUserInput(string input){
 		        if (input == "menu") {
 		            ShowMainMenu ("Welcome back, Agent Huss");
@@ -73,12 +82,17 @@ C#
 		    void StartGame() {
 		        Terminal.WriteLine ("You have chosen level " + level);
 		    } 
+```
 14. Add a string array of level1Passwords and level2Passwords
+```
 		    string[] level1Passwords = {"books", "aisle", "self", "front"};
 		    string[] level2Passwords = {"prison", "handcuff", "uniform", "jail"} 
+```
 		
-15. Add a string password to the Game State
-16. Add a new condition to the OnUserInput method
+15. Add a string `password` to the Game State
+16. Add a new condition to the `OnUserInput` method
+
+```
 		    void OnUserInput(string input){
 		        if (input == "menu") {
 		            ShowMainMenu ("Welcome back, Agent Huss");
@@ -88,7 +102,10 @@ C#
 		            CheckPassword(input);
 		        }
 		    } 
+```
+
 17. Add the CheckPassword method
+```
 		    void CheckPassword(string input){
 		        if (input == password) {
 		            DisplayWinScreen();
@@ -96,9 +113,12 @@ C#
 		        } else {
 		            Terminal.WriteLine("WRONG PASSWORD!");
 		        }
-		    } 
+		    }
+```
 		 
-18. In start game, use a switch statement to set the password 
+18. In start game, use a switch statement to set the password
+
+```
 		    void StartGame() {
 		        currentScreen = Screen.Password;
 		        Terminal.WriteLine ("You have chosen level " + level);
@@ -114,9 +134,12 @@ C#
 		            break;
 		        }
 		    } 
+```
 		     
 		
 19. Make the password randomized
+
+```
 	        case 1: 
 	            password = level1Passwords [Random.Range(0, level1Passwords.Length)]; //make random later on
 	            print(password);
@@ -124,8 +147,12 @@ C#
 	        case 2:
 	            password = level2Passwords [Random.Range(0, level2Passwords.Length)];
 	            break;
+		    
+```
 
 20. Refactor to make code simpler
+
+```
 
     void StartGame() {
         AskForPassword();
@@ -160,3 +187,4 @@ C#
             break;
         }
     }
+ ```

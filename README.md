@@ -41,6 +41,9 @@
 		   
 		
 10. Lose a semi colon somewhere to show them how to read errors
+------------------------------------------------------------------
+GIVE TASK 1 NOW 
+------------------------------------------------------------------
 11. Use the OnUserInput (build into this project, not a Unity thing), and show them print statement in console
 ```
 		    void OnUserInput(string input){
@@ -82,13 +85,16 @@
 		        Terminal.WriteLine ("You have chosen level " + level);
 		    } 
 ```
+--------------------------------------------------------------------------------
+GIVE TASK 2 NOW
+--------------------------------------------------------------------------------
 14. Add a string array of level1Passwords and level2Passwords
 ```
 		    string[] level1Passwords = {"books", "aisle", "self", "front"};
 		    string[] level2Passwords = {"prison", "handcuff", "uniform", "jail"} 
 ```
 		
-15. Add a string `password` to the Game State
+15. Add a string `password` to the Game State, and give it a value `test`
 16. Add a new condition to the `OnUserInput` method
 
 ```
@@ -107,13 +113,15 @@
 ```
 		    void CheckPassword(string input){
 		        if (input == password) {
-		            DisplayWinScreen();
+		            Terminal.WriteLine("YOU WIN!")
 		
 		        } else {
-		            Terminal.WriteLine("WRONG PASSWORD!");
+		            Terminal.WriteLine("WRONG PASSWORD! Type menu to go back");
 		        }
-		    }
+		    }		  
 ```
+
+Now, run the game to show what happens when there is a password match. 
 		 
 18. In start game, use a switch statement to set the password
 
@@ -170,7 +178,7 @@
         currentScreen = Screen.Password;
         Terminal.WriteLine ("You have chosen level " + level);
         SetRandomPassword ();
-        Terminal.WriteLine ("Enter password: " + password.Anagram());
+        Terminal.WriteLine ("Enter password: " + password.Anagram()); //Tell them that this method is predefined. Use it. You don't need to know how it works, just what it does.
     }
 
     void SetRandomPassword(){
@@ -187,3 +195,7 @@
         }
     }
  ```
+ 
+--------------------------------------------------------------------------------
+GIVE TASK 3 NOW
+--------------------------------------------------------------------------------

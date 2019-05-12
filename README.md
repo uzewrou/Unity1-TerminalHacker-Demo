@@ -2,7 +2,7 @@
 
 ### DO NOT CLONE this demo. This repo has the working solution of the terminal hacker game.  Instead, create a new project and follow these steps:
 
-1. Create a new 3D Unity Project
+1. Create a new 2D Unity Project
 2. Assets > Import Package > Custom Package [these](https://drive.google.com/open?id=1_0dUHQ9KFmEfOyo2VTyzJjP1_0q5wjiR) assets
 3. Open the WM2000 folder, then drag and drop the WM2000 Game Object into the Hierarchy
 4. Save the scene (name it Terminal, for example)

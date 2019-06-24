@@ -194,6 +194,12 @@ Now, run the game to show what happens when there is a password match.
             break;
         }
     }
+    
+    void DisplayWinScreen(){
+		currentScreen = Screen.Win;
+		Terminal.ClearScreen();
+		Terminal.WriteLine("YOU WON!");
+	}
  ```
  
 --------------------------------------------------------------------------------

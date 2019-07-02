@@ -65,12 +65,12 @@ GIVE TASK 1 NOW
 		    void OnUserInput(string input){
 		        if (input == "menu") {
 		            ShowMainMenu ("Welcome back, Agent Huss");
-		        } else if (currentScreen == Screen.MainMenu) {
-		            RunMainMenu (input);
+		        } else {
+		            SetLevel(input);
 		        }
 		    }
 		
-		    void RunMainMenu(string input){
+		    void SetLevel(string selectedLevel){
 		        if (input == "1") {
 		            level = 1;
 		            StartGame ();
@@ -102,7 +102,7 @@ GIVE TASK 2 NOW
 		        if (input == "menu") {
 		            ShowMainMenu ("Welcome back, Agent Huss");
 		        } else if (currentScreen == Screen.MainMenu) {
-		            RunMainMenu (input);
+		             SetLevel(input);
 		        } else if (currentScreen == Screen.Password) {
 		            CheckPassword(input);
 		        }

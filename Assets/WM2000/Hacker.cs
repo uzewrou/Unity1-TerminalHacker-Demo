@@ -26,8 +26,8 @@ public class Hacker : MonoBehaviour {
 		currentScreen = Screen.MainMenu;
 		Terminal.WriteLine (greeting);
 		Terminal.WriteLine ("What would you like to hack into?");
-		Terminal.WriteLine ("Press 1 for the local library");
-		Terminal.WriteLine ("Press 2 for the local police station");
+		Terminal.WriteLine ("Press 1 for the Book Room");
+		Terminal.WriteLine ("Press 2 for the local Military Office ");
 		Terminal.WriteLine ("Enter your selection:");
 	}
 
